@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racing Car Website - Cars</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <nav class="racing-nav">
+        <div class="logo">RACING CAR WEBSITE</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cars.html" class="active">Cars</a></li>
+            <li><a href="tracks.html">Tracks</a></li>
+            <li><a href="drivers.html">Drivers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><button class="login-btn">Login</button></li>
+        </ul>
+        <div class="search-bar">
+            <input type="text" placeholder="🔍 Search cars...">
+            <button>Search</button>
+        </div>
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <main>
+        <h1 class="page-title">Our Racing Cars</h1>
+
+        <div class="filter-options">
+            <div class="filter-group">
+                <label for="car-type">Car Type:</label>
+                <select id="car-type">
+                    <option value="all">All Types</option>
+                    <option value="sports">Sports Cars</option>
+                    <option value="super">Super Cars</option>
+                    <option value="hyper">Hyper Cars</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="speed-range">Speed Range:</label>
+                <select id="speed-range">
+                    <option value="all">All Speeds</option>
+                    <option value="300">300+ km/h</option>
+                    <option value="350">350+ km/h</option>
+                    <option value="400">400+ km/h</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="manufacturer">Manufacturer:</label>
+                <select id="manufacturer">
+                    <option value="all">All Manufacturers</option>
+                    <option value="ferrari">Ferrari</option>
+                    <option value="porsche">Porsche</option>
+                    <option value="lamborghini">Lamborghini</option>
+                    <option value="bugatti">Bugatti</option>
+                    <option value="mclaren">McLaren</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="car-list">
+            <!-- Car items will be loaded here -->
+            <div class="car-item">
+                <div class="car-image" style="background-image: url('images/cars/ferrari-sf90.jpg')"></div>
+                <div class="car-info">
+                    <h3>Ferrari F8 Tributo</h3>
+                    <div class="car-specs">
+                        <p><strong>Top Speed:</strong> 340 km/h</p>
+                        <p><strong>0-100 km/h:</strong> 2.9s</p>
+                        <p><strong>Engine:</strong> 3.9L V8 Twin-Turbo</p>
+                    </div>
+                    <button class="view-details-btn">View Details</button>
+                    <div class="car-details">
+                        <p><strong>Price:</strong> $276,000</p>
+                        <p><strong>Horsepower:</strong> 710 hp</p>
+                        <p><strong>Torque:</strong> 770 Nm</p>
+                        <p><strong>Weight:</strong> 1435 kg</p>
+                        <p><strong>Transmission:</strong> 7-speed Dual-Clutch</p>
+                    </div>
+                    <!--Car items will be loaded here-->
+                    <div class="car-item">
+                        <div class="car-image" style="background-image: url('images/porsche-911.jpg')"></div>
+                        <div class="car-info">
+                            <h3>Porsche 911 GT3</h3>
+                            <div class="car-specs">
+                                <p><strong>Top Speed:</strong> 318 km/h</p>
+                                <p><strong>0-100 km/h:</strong> 3.2s</p>
+                                <p><strong>Engine:</strong> 4.0L Flat-Six</p>
+                            </div>
+                            <button class="view-details-btn">View Details</button>
+                            <div class="car-details">
+                                <p><strong>Price:</strong> $162,000</p>
+                                <p><strong>Horsepower:</strong> 502 hp</p>
+                                <p><strong>Torque:</strong> 469 Nm</p>
+                                <p><strong>Weight:</strong> 1430 kg</p>
+                                <p><strong>Transmission:</strong> 7-speed PDK</p>
+                            </div>
+                        </div>
+                        <!-- Car items will be loaded here -->
+                        <div class="car-item">
+                            <div class="car-image" style="background-image: url('images/lamborghini-huracan.jpg')">
+                            </div>
+                            <div class="car-info">
+                                <h3>Lamborghini Huracán</h3>
+                                <div class="car-specs">
+                                    <p><strong>Top Speed:</strong> 325 km/h</p>
+                                    <p><strong>0-100 km/h:</strong> 2.9s</p>
+                                    <p><strong>Engine:</strong> 5.2L V10</p>
+                                </div>
+                                <button class="view-details-btn">View Details</button>
+                                <div class="car-details">
+                                    <p><strong>Price:</strong> $261,000</p>
+                                    <p><strong>Horsepower:</strong> 630 hp</p>
+                                    <p><strong>Torque:</strong> 600 Nm</p>
+                                    <p><strong>Weight:</strong> 1422 kg</p>
+                                    <p><strong>Transmission:</strong> 7-speed Dual-Clutch</p>
+                                </div>
+                            </div>
+                            <!--Cars items will be loaded here-->
+                            <div class="car-item-parent">
+                                <div class="car-image" style="background-image: url('images/bugatti-chiron.jpg')"></div>
+                                <div class="car-info">
+                                    <h3>Bugatti Chiron</h3>
+                                    <div class="car-specs">
+                                        <p><strong>Top Speed:</strong> 420 km/h</p>
+                                        <p><strong>0-100 km/h:</strong> 2.5s</p>
+                                        <p><strong>Engine:</strong> 8.0L W16 Quad-Turbo</p>
+                                    </div>
+                                    <button class="view-details-btn">View Details</button>
+                                    <div class="car-details">
+                                        <p><strong>Price:</strong> $3,000,000</p>
+                                        <p><strong>Horsepower:</strong> 1500 hp</p>
+                                        <p><strong>Torque:</strong> 1600 Nm</p>
+                                        <p><strong>Weight:</strong> 1995 kg</p>
+                                        <p><strong>Transmission:</strong> 7-speed Dual-Clutch</p>
+                                    </div>
+                                </div>
+                                <!-- Car items will be loaded here -->
+                                <div class="car-item">
+                                    <div class="car-image" style="background-image: url('images/mclaren-p1.jpg')"></div>
+                                    <div class="car-info">
+                                        <h3>McLaren P1</h3>
+                                        <div class="car-specs">
+                                            <p><strong>Top Speed:</strong> 350 km/h</p>
+                                            <p><strong>0-100 km/h:</strong> 2.8s</p>
+                                            <p><strong>Engine:</strong> 3.8L V8 Twin-Turbo</p>
+                                        </div>
+                                        <button class="view-details-btn">View Details</button>
+                                        <div class="car-details">
+                                            <p><strong>Price:</strong> $1,150,000</p>
+                                            <p><strong>Horsepower:</strong> 903 hp</p>
+                                            <p><strong>Torque:</strong> 900 Nm</p>
+                                            <p><strong>Weight:</strong> 1600 kg</p>
+                                            <p><strong>Transmission:</strong> 7-speed Dual-Clutch</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Car items will be loaded here -->
+                                <div class="car-item">
+                                    <div class="car-image" style="background-image: url('images/mercedes-amg-gt.jpg')">
+                                    </div>
+                                    <div class="car-info">
+                                        <h3>Mercedes-AMG GT</h3>
+                                        <div class="car-specs">
+                                            <p><strong>Top Speed:</strong> 315 km/h</p>
+                                            <p><strong>0-100 km/h:</strong> 3.6s</p>
+                                            <p><strong>Engine:</strong> 4.0L V8 Twin-Turbo</p>
+                                        </div>
+                                        <button class="view-details-btn">View Details</button>
+                                        <div class="car-details">
+                                            <p><strong>Price:</strong> $162,000</p>
+                                            <p><strong>Horsepower:</strong> 523 hp</p>
+                                            <p><strong>Torque:</strong> 670 Nm</p>
+                                            <p><strong>Weight:</strong> 1540 kg</p>
+                                            <p><strong>Transmission:</strong> 7-speed Dual-Clutch</p>
+                                        </div>
+                                    </div>
+                                    <div class="car-image"
+                                        style="background-image: url('images/aston-martin-valkyrie.jpg')"></div>
+                                    <div class="car-info">
+                                        <h3>Aston Martin Valkyrie</h3>
+                                        <div class="car-specs">
+                                            <p><strong>Top Speed:</strong> 402 km/h</p>
+                                            <p><strong>0-100 km/h:</strong> 2.5s</p>
+                                            <p><strong>Engine:</strong> 6.5L V12 Hybrid</p>
+                                        </div>
+                                        <button class="view-details-btn">View Details</button>
+                                        <div class="car-details">
+                                            <p><strong>Price:</strong> $3,000,000</p>
+                                            <p><strong>Horsepower:</strong> 1160 hp</p>
+                                            <p><strong>Torque:</strong> 900 Nm</p>
+                                            <p><strong>Weight:</strong> 1030 kg</p>
+                                            <p><strong>Transmission:</strong> 7-speed Automated Manual</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- More car items would follow the same pattern -->
+                        </div>
+    </main>
+
+    <footer class="racing-footer">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <!-- Same login modal as index.html -->
+
+    <script src="js/main.js"></script>
+    <script src="js/cars.js"></script>
+</body>
+
+</html>

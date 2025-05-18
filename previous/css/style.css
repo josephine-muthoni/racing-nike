@@ -1,0 +1,538 @@
+/* Global Styles */
+:root {
+    --primary-color: #FF2800;
+    --secondary-color: #000000;
+    --accent-color: #00A2FF;
+    --light-color: #FFFFFF;
+    --dark-color: #333333;
+    --gray-color: #CCCCCC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Navigation */
+.racing-nav {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+}
+
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.login-btn {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.login-btn:hover {
+    background-color: #cc2000;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-bar button {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light-color);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background-color: #cc2000;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Featured Cars */
+.featured-cars {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+}
+
+.featured-cars h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--secondary-color);
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.car-card {
+    background: var(--light-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.car-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.car-card h3 {
+    padding: 1rem 1rem 0;
+    color: var(--secondary-color);
+}
+
+.car-card p {
+    padding: 0 1rem;
+    margin: 0.5rem 0;
+}
+
+.specs-btn {
+    background-color: var(--accent-color);
+    color: var(--light-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.specs-btn:hover {
+    background-color: #0085cc;
+}
+
+.car-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    padding: 0 1rem;
+}
+
+.car-details.active {
+    max-height: 500px;
+    padding: 1rem;
+    border-top: 1px solid var(--gray-color);
+}
+
+/* Speed Comparison */
+.speed-comparison {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.speed-comparison h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.comparison-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.comparison-container select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--gray-color);
+}
+
+.comparison-container button {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.comparison-result {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Filter Options */
+.filter-options, .track-filters, .driver-filters {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.filter-group select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--gray-color);
+    min-width: 200px;
+}
+
+/* Car/Track/Driver Lists */
+.car-list, .track-list, .driver-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.car-item, .track-card, .driver-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.car-item:hover, .track-card:hover, .driver-card:hover {
+    transform: translateY(-5px);
+}
+
+.car-image, .track-image, .driver-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.car-info, .track-info, .driver-info {
+    padding: 1.5rem;
+}
+
+.car-info h3, .track-info h3, .driver-info h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.car-specs p, .track-details p, .driver-stats p {
+    margin-bottom: 0.5rem;
+}
+
+.view-details-btn, .view-track-btn, .view-driver-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+/* Contact Page */
+.contact-page {
+    padding: 3rem 0;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--gray-color);
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #cc2000;
+}
+
+.contact-info {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.contact-info h3 {
+    margin-top: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-info i {
+    color: var(--primary-color);
+}
+
+.map-container {
+    height: 450px;
+    margin-bottom: 3rem;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Footer */
+.racing-footer {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 1rem;
+    border-top: 1px solid var(--gray-color);
+}
+/* Add to style.css */
+
+/* Car Type Badges */
+.car-item::after {
+    content: attr(data-type);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+.car-item[data-type="sports"]::after {
+    background-color: #3498db;
+}
+
+.car-item[data-type="super"]::after {
+    background-color: #e74c3c;
+}
+
+.car-item[data-type="hyper"]::after {
+    background-color: #9b59b6;
+}
+
+.car-item[data-type="electric"]::after {
+    background-color: #2ecc71;
+}
+
+.car-item[data-type="muscle"]::after {
+    background-color: #f39c12;
+}
+
+/* Manufacturer Logos */
+.car-image {
+    position: relative;
+}
+
+.car-image::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.car-item-parent{
+    background-image: url('../images/car1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+}
+
+.car-item {
+    background-image: url('../images/car1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+}
+

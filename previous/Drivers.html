@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racing Car Website - Drivers</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="racing-nav">
+        <div class="logo">RACING CAR WEBSITE</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cars.html">Cars</a></li>
+            <li><a href="tracks.html">Tracks</a></li>
+            <li><a href="drivers.html" class="active">Drivers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><button class="login-btn">Login</button></li>
+        </ul>
+        <div class="search-bar">
+            <input type="text" placeholder="🔍 Search drivers...">
+            <button>Search</button>
+        </div>
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <main>
+        <h1 class="page-title">Legendary Racing Drivers</h1>
+        
+        <div class="driver-filters">
+            <div class="filter-group">
+                <label for="driver-era">Era:</label>
+                <select id="driver-era">
+                    <option value="all">All Eras</option>
+                    <option value="current">Current</option>
+                    <option value="1990-2010">1990-2010</option>
+                    <option value="1970-1990">1970-1990</option>
+                    <option value="1950-1970">1950-1970</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="driver-nationality">Nationality:</label>
+                <select id="driver-nationality">
+                    <option value="all">All Nationalities</option>
+                    <option value="british">British</option>
+                    <option value="german">German</option>
+                    <option value="finnish">Finnish</option>
+                    <option value="brazilian">Brazilian</option>
+                    <option value="american">American</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="driver-list">
+            <div class="driver-card">
+                <div class="driver-image" style="background-image: url('images/ayrton-senna.jpg')"></div>
+                <div class="driver-info">
+                    <h3>Ayrton Senna</h3>
+                    <div class="driver-stats">
+                        <p><strong>Nationality:</strong> Brazilian</p>
+                        <p><strong>Championships:</strong> 3</p>
+                        <p><strong>Race Wins:</strong> 41</p>
+                        <p><strong>Era:</strong> 1984-1994</p>
+                    </div>
+                    <button class="view-driver-btn">View Profile</button>
+                </div>
+            </div>
+            <div class="driver-card">
+                <div class="driver-image" style="background-image: url('images/michael-schumacher.jpg')"></div>
+                <div class="driver-info">
+                    <h3>Michael Schumacher</h3>
+                    <div class="driver-stats">
+                    <p><strong>Nationality:</strong> German</p>
+                    <p><strong>Championships:</strong> 7</p>
+                    <p><strong>Race Wins:</strong> 91</p>
+                    <p><strong>Era:</strong> 1991-2006, 2010-2012</p>
+                    </div>
+                    <button class="view-driver-btn">View Profile</button>
+                </div>
+            </div>
+            <div class="driver-card">
+                <div class="driver-image" style="background-image: url('images/lewis-hamilton.jpg')"></div>
+                <div class="driver-info">
+                    <h3>Lewis Hamilton</h3>
+                    <div class="driver-stats">
+                    <p><strong>Era:</strong> 2007-Present</p>
+
+            
+            <!-- More driver cards would follow the same pattern -->
+        </div>
+    </main>
+
+    <footer class="racing-footer">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <!-- Same login modal as index.html -->
+
+    <script src="js/main.js"></script>
+    <script src="js/drivers.js"></script>
+</body>
+</html>

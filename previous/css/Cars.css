@@ -1,0 +1,87 @@
+/* Car Type Badges */
+.car-item::after {
+    content: attr(data-type);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+.car-item[data-type="sports"]::after {
+    background-color: #3498db;
+}
+
+.car-item[data-type="super"]::after {
+    background-color: #e74c3c;
+}
+
+.car-item[data-type="hyper"]::after {
+    background-color: #9b59b6;
+}
+
+.car-item[data-type="electric"]::after {
+    background-color: #2ecc71;
+}
+
+.car-item[data-type="muscle"]::after {
+    background-color: #f39c12;
+}
+
+/* Manufacturer Logos */
+.car-image {
+    position: relative;
+}
+
+.car-image::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.car-item[data-manufacturer="ferrari"] .car-image::after {
+    background-image: url('https://tse4.mm.bing.net/th?id=OIP.BX-vphhhnmr0dywD-CffYAHaEK&pid=Api&P=0&h=220');
+}
+
+.car-item[data-manufacturer="bugatti"] .car-image::after {
+    background-image: url('https://tse4.mm.bing.net/th?id=OIP.85uMRVeL0hzZ286_ADp4eQHaEK&pid=Api&P=0&h=220&w=220');
+}
+
+.car-item[data-manufacturer="mclaren"] .car-image::after {
+    background-image: url('https://www.hdcarwallpapers.com/download/2018_mclaren_mso_x_white_red_5k_3-5120x2880.jpg');
+}
+
+.car-item[data-manufacturer="lamborghini"] .car-image::after {
+    background-image: url('https://tse4.mm.bing.net/th?id=OIP.uY_O6Xs9-XNB0nsTT85yyQHaEA&pid=Api&P=0&h=220&w=220');
+}
+
+.car-item[data-manufacturer="ford"] .car-image::after {
+    background-image: url('https://tse3.mm.bing.net/th?id=OIP.cbiKI09yW6NgrZtH1kx2aAHaE8&pid=Api&P=0&h=220&w=220');
+}
+
+.car-item[data-manufacturer="tesla"] .car-image::after {
+    background-image: url('http://www.xautoworld.com/wp-content/uploads/2017/05/exp-concept-rear-side.jpg');
+}
+
+.car-item[data-manufacturer="chevrolet"] .car-image::after {
+    background-image: url('https://tse3.mm.bing.net/th?id=OIP.QvZuxIPkNrQPQtC3bQcYjQHaHa&pid=Api&P=0&h=220&w=220');
+}
+
+.car-item[data-manufacturer="porsche"] .car-image::after {
+    background-image: url(https://tse3.mm.bing.net/th?id=OIP.i3yD-USrhnBnMLwEWltMqwHaEK&pid=Api&P=0&h=220&w=220);
+}
+
+/*images */
+.car-item[data-manufacturer="audi"] .car-image::after {
+    background-image: url('https://tse1.mm.bing.net/th?id=OIP.3NfITUgnRTpo1UZq0i3E8QHaE8&pid=Api&P=0&h=220&w=220');
+}

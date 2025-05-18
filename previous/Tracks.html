@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racing Car Website - Tracks</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="racing-nav">
+        <div class="logo">RACING CAR WEBSITE</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cars.html">Cars</a></li>
+            <li><a href="tracks.html" class="active">Tracks</a></li>
+            <li><a href="drivers.html">Drivers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><button class="login-btn">Login</button></li>
+        </ul>
+        <div class="search-bar">
+            <input type="text" placeholder="🔍 Search tracks...">
+            <button>Search</button>
+        </div>
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <main>
+        <h1 class="page-title">World Famous Racing Tracks</h1>
+        
+        <div class="track-filters">
+            <div class="filter-group">
+                <label for="track-country">Country:</label>
+                <select id="track-country">
+                    <option value="all">All Countries</option>
+                    <option value="italy">Italy</option>
+                    <option value="germany">Germany</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="usa">United States</option>
+                    <option value="japan">Japan</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="track-type">Track Type:</label>
+                <select id="track-type">
+                    <option value="all">All Types</option>
+                    <option value="circuit">Circuit</option>
+                    <option value="street">Street Circuit</option>
+                    <option value="oval">Oval</option>
+                    <option value="road">Road Course</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="track-list">
+            <div class="track-card">
+                <div class="track-image" style="background-image: url('images/nurburgring.jpg')"></div>
+                <div class="track-info">
+                    <h3>Nürburgring Nordschleife</h3>
+                    <div class="track-details">
+                        <p><strong>Location:</strong> Nürburg, Germany</p>
+                        <p><strong>Length:</strong> 20.8 km</p>
+                        <p><strong>Type:</strong> Circuit</p>
+                        <p><strong>Known as:</strong> The Green Hell</p>
+                    </div>
+                    <button class="view-track-btn">View Details</button>
+                </div>
+            </div>
+            <div class="track-card">
+                <div class="track-image" style="background-image: url('images/silverstone.jpg')"></div>
+                <div class="track-info">
+                    <h3>Silverstone Circuit</h3>
+                    <div class="track-details">
+                        <p><strong>Location:</strong> Northamptonshire, UK</p>
+                        <p><strong>Length:</strong> 5.891 km</p>
+                        <p><strong>Type:</strong> Circuit</p>
+                        <p><strong>Known for:</strong> British Grand Prix</p>
+                    </div>
+                    <button class="view-track-btn">View Details</button>
+                </div>
+            </div>
+            <div class="track-card">
+                <div class="track-image" style="background-image: url('images/monza.jpg')"></div>
+                <div class="track-info">
+                    <h3>Autodromo Nazionale Monza</h3>
+                    <div class="track-details">
+                        <p><strong>Location:</strong> Monza, Italy</p>
+                        <p><strong>Length:</strong> 5.793 km</p>
+                        <p><strong>Type:</strong> Circuit</p>
+                        <p><strong>Known for:</strong> High-speed straights</p>
+                    </div>
+                    <button class="view-track-btn">View Details</button>
+                </div>
+            </div>
+            <div class="track-card">
+                <div class="track-image" style="background-image: url('images/monaco.jpg')"></div>
+                <div class="track-info">
+                    <h3>Monaco Grand Prix Circuit</h3>
+                    <div class="track-details">
+                        <p><strong>Location:</strong> Monte Carlo, Monaco</p>
+                        <p><strong>Length:</strong> 3.337 km</p>
+                        <p><strong>Type:</strong> Street Circuit</p>
+                        <p><strong>Known for:</strong> Tight corners and elevation changes</p>
+                    </div>
+                    <button class="view-track-btn">View Details</button>
+                </div>
+            </div>
+            <div class="track-card">
+                <div class="track-image" style="background-image: url('images/daytona.jpg')"></div>
+                <div class="track-info  ">
+                    <h3>Daytona International Speedway</h3>
+                    <div class="track-details">
+                        <p><strong>Location:</strong> Daytona Beach, Florida, USA</p>
+                        <p><strong>Length:</strong> 4.023 km</p>
+                        <p><strong>Type:</strong> Oval</p>
+                        <p><strong>Known for:</strong> Daytona 500</p>
+                    </div>
+                    <button class="view-track-btn">View Details</button>
+                </div>
+            <!-- More track cards would follow the same pattern -->
+        </div>
+    </main>
+
+    <footer class="racing-footer">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <!-- Same login modal as index.html -->
+
+    <script src="js/main.js"></script>
+    <script src="js/tracks.js"></script>
+</body>
+</html>
